@@ -1,13 +1,14 @@
-import { NextResponse } from 'next/server';
+
+import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(
-  request: Request,
+  request: NextRequest,
   { params }: { params: { slug: string } }
 ) {
   const slug = params.slug;
 
-  // TEMP destination
-  const destination = 'https://example.com';
+  const target = 'https://google.com'; // test destination
 
-  return NextResponse.redirect(destination, 302);
+  return NextResponse.redirect(target, 302);
 }
+
